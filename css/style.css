@@ -1,12 +1,22 @@
 h1 {
+    text-align: center;
     font-size: 72px;  
 }
 
 h2 {
-    color: #00ff00;
+    font-family:georgia;
+    color: indianred;
 }
 
 h4.job-title {
+}
+
+h2.heading{
+    color:royalblue;
+}
+
+h2.job{
+    font-family: georgia;
 }
 
 h2#menu {
@@ -23,6 +33,19 @@ h2#job {
     color: blue;
 }
 
-/* .navlink {
-    color: red;
-} */
+.navlink {
+    color:blueviolet
+}
+
+body {
+    background-color: rgba(200,200,100,0.4);
+    font-family: georgia;
+}
+
+.button{
+    font-size:100px;
+}
+
+.skills{
+    margin: 0 auto;
+}
