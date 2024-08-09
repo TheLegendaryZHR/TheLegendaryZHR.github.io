@@ -70,22 +70,20 @@
     <h1>HAPPY BIRTHDAYYYYYYYYYYYYYYYYYYYYYYYY</h1>
     <div class="center-container">
     <!-- Hidden audio element -->
-        <audio id="audio1" src="../music/combined.wav"></audio>
+        <audio id="audio1" src="janisa/music/combined.wav"></audio>
 
         <!-- Custom play button -->
         <button class="play-button" onclick="playAudioAndShowImages()">PRESS TO START!!!!!!! (max out volume and make sure theres nobody around you)(if you want)</button>
         <!-- Hidden images -->
         <button class="stop-button" onclick="stopEverything()">Stop Everything</button>
-        <img id="image1" class="bouncing-image" src="../images/img1.jpg" alt="Image 1">
-        <img id="image2" class="bouncing-image" src="../images/img2.jpg" alt="Image 2">
-        <img id="image3" class="bouncing-image" src="../images/img3.jpg" alt="Image 3">
-        <img id="image4" class="bouncing-image" src="../images/img4.jpg" alt="Image 4">
-        <img id="image5" class="bouncing-image" src="../images/img5.jpg" alt="Image 5">
-        <img id="image6" class="bouncing-image" src="../images/img6.jpg" alt="Image 6">
-        <img id="image7" class="bouncing-image" src="../images/img7.jpg" alt="Image 7">
-        <img id="image8" class="bouncing-image" src="../images/img8.jpg" alt="Image 8">
-        <!-- Final image to display -->
-        <img id="finalImage" class="final-image" src="../images/img1.jpg" alt="Final Image">
+        <img id="image1" class="bouncing-image" src="janisa/images/img1.jpg" alt="Image 1">
+        <img id="image2" class="bouncing-image" src="janisa/images/img2.jpg" alt="Image 2">
+        <img id="image3" class="bouncing-image" src="janisa/images/img3.jpg" alt="Image 3">
+        <img id="image4" class="bouncing-image" src="janisa/images/img4.jpg" alt="Image 4">
+        <img id="image5" class="bouncing-image" src="janisa/images/img5.jpg" alt="Image 5">
+        <img id="image6" class="bouncing-image" src="janisa/images/img6.jpg" alt="Image 6">
+        <img id="image7" class="bouncing-image" src="janisa/images/img7.jpg" alt="Image 7">
+        <img id="image8" class="bouncing-image" src="janisa/images/img8.jpg" alt="Image 8">
     </div>
     <script>
         function playAudioAndShowImages() {
@@ -139,26 +137,13 @@
             const randomColor = () => Math.floor(Math.random() * 256);
             const color = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
             document.body.style.backgroundColor = color;
-
+            const randomColor2 = () => Math.floor(Math.random() * 256);
+            const color2 = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
+            document.getElementById("msg").style.color = color2;
             // Change color every 1 second
             setTimeout(changeBackgroundColor, 100);
         }
-        function stopEverything() {
-            // Stop audio
-            document.getElementById('audio1').pause();
-            document.getElementById('audio1').currentTime = 0; // Reset audio to start
-
-            // Stop background color animation
-            clearTimeout(animationInterval);
-
-            // Hide bouncing images
-            document.querySelectorAll('.bouncing-image').forEach(img => {
-                img.style.display = 'none';
-            });
-
-            // Show final image
-            document.getElementById('finalImage').style.display = 'block';
-        }
+        
     </script>
 </body>
 </html>
